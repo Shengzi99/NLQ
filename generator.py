@@ -57,5 +57,5 @@ resume_config = yaml.load(
 )
 
 for i in range(10):
-    qg = QueryGenerator(i, resume_config)
-    qg.load_query()
+    qg = ResumeGenerator(i, resume_config)
+    qg.load_resume()
