@@ -1,43 +1,42 @@
 exp_labels = (
-    '公安',
-    '海关',
-    '学生',
-    '环境保护',
-    '出入境管理',
+    '劳动保障',
     '保险',
+    '学生',
     '交通运输',
-    '财务会计',
-    '法律',
+    '技术',
     '建筑相关',
     '工程师',
-    '技术',
-    '药品监督',
-    '信息技术',
-    '市政管理',
-    '教育',
-    '计算机相关',
-    '旅游业相关',
-    '体育相关',
-    '农业',
     '房地产相关',
     '军队',
-    '监督检查',
-    '医疗',
-    '税务相关',
-    '劳动保障',
+    '公安',
+    '财务会计',
     '金融',
-    '学术研究',
+    '税务相关',
+    '监督检查',
+    '海关',
+    '法律',
+    '农业',
+    '出入境管理',
+    '市政管理',
     '执法人员',
-    '数据统计'
+    '数据统计',
+    '医疗',
+    '信息技术',
+    '计算机相关',
+    '教育',
+    '环境保护',
+    '旅游业相关',
+    '学术研究',
+    '体育相关'
 )
 
-def _exp_labels_to_id(exp):
+def _label_to_id(exp):
     if exp not in exp_labels:
         return None
     exp_dict = {exp: i for i, exp in enumerate(exp_labels)}
     return exp_dict[exp]
 
-def _exp_labels_to_id(id):
+def _id_to_label(id):
     if id >= len(exp_labels):
         return None
     else:
