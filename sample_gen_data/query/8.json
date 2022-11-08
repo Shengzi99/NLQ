@@ -1,0 +1,1 @@
+{"id": 8, "raw_text": "要求50岁以下，有公安相关工作经验或具有三年以下技术相关工作经验,拥有硕士研究生学历.", "教育经历": {"query_text": "拥有硕士研究生学历", "attribute": "硕士"}, "年龄": {"query_text": "要求50岁以下", "attribute": "50", "condition": "以下"}, "性别": {}, "职级": {}, "工作经历": {"exp": [{"query_text": "有公安相关工作经验", "attribute": "公安", "condition": null}], "logic": "或"}}

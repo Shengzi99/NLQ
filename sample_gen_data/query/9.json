@@ -1,0 +1,25 @@
+{
+    "id": 9,
+    "raw_text": "具有学生相关工作经历，有博士研究生学历,要求30岁以下。",
+    "教育经历": {
+        "query_text": "有博士研究生学历",
+        "attribute": "博士"
+    },
+    "年龄": {
+        "query_text": "要求30岁以下",
+        "attribute": "30",
+        "condition": "以下"
+    },
+    "性别": {},
+    "职级": {},
+    "工作经历": {
+        "exp": [
+            {
+                "query_text": "具有学生相关工作经历",
+                "attribute": "学生",
+                "condition": null
+            }
+        ],
+        "logic": null
+    }
+}

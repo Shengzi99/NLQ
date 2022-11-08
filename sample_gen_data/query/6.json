@@ -1,0 +1,1 @@
+{"id": 6, "raw_text": "要求45以上，有教育相关工作经验，具有一本学历。", "教育经历": {"query_text": "具有一本学历", "attribute": "本科"}, "年龄": {"query_text": "要求45以上", "attribute": "45", "condition": "以上"}, "性别": {}, "职级": {}, "工作经历": {"exp": [{"query_text": "有教育相关工作经验", "attribute": "教育", "condition": null}], "logic": null}}
