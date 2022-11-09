@@ -1,1 +1,32 @@
-{"id": 3, "raw_text": "要求55岁以下，副科级(及以上) 有本科以上学历，有医疗相关工作经历。", "教育经历": {"query_text": "有本科以上学历", "attribute": "本科"}, "年龄": {"query_text": "要求55岁以下", "attribute": "55", "condition": "以下"}, "性别": {}, "职级": {"query_text": "副科级(及以上)", "attribute": "副科级"}, "工作经历": {"exp": [{"query_text": "有医疗相关工作经历", "attribute": "医疗", "condition": null}], "logic": null}}
+{
+    "id": 3,
+    "raw_text": "具有技术相关工作经历和有四年以下公安工作经历,要求至少有本科以上学历,要求女性",
+    "教育经历": {
+        "query_text": "要求至少有本科以上学历",
+        "attribute": "本科"
+    },
+    "年龄": {},
+    "性别": {
+        "query_text": "要求女性",
+        "attribute": "女性"
+    },
+    "职级": {},
+    "工作经历": {
+        "exp": [
+            {
+                "query_text": "具有技术相关工作经历",
+                "attribute": "技术",
+                "condition": null
+            },
+            {
+                "query_text": "有四年以下公安工作经历",
+                "attribute": "公安",
+                "condition": [
+                    4,
+                    "以下"
+                ]
+            }
+        ],
+        "logic": "和"
+    }
+}

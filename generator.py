@@ -110,7 +110,7 @@ class QueryGenerator():
                 condition = (time[1], condition)
             else:
                 template = template.replace("#", label)
-                self.work_exp['exp'].append({'query_text': template, 'attribute': label, 'condition': condition})
+            self.work_exp['exp'].append({'query_text': template, 'attribute': label, 'condition': condition})
             logic = np.random.choice(['和', '或'], p=[0.3, 0.7])
             self.work_exp['logic'] = logic
             exp_raw_text += logic

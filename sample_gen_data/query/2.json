@@ -1,1 +1,39 @@
-{"id": 2, "raw_text": "有学生相关工作经验和具有公安相关工作经历 要求有本科学历，40岁以上,担任过正科级以上干部。", "教育经历": {"query_text": "要求有本科学历", "attribute": "本科"}, "年龄": {"query_text": "40岁以上", "attribute": "40", "condition": "以上"}, "性别": {}, "职级": {"query_text": "担任过正科级以上干部", "attribute": "正科级"}, "工作经历": {"exp": [{"query_text": "有学生相关工作经验", "attribute": "学生", "condition": null}, {"query_text": "具有公安相关工作经历", "attribute": "公安", "condition": null}], "logic": "和"}}
+{
+    "id": 2,
+    "raw_text": "男性优先，要求有硕士研究生学历，要求40岁以下,有5年以下农业相关工作经验和有5年以下保险工作经历.",
+    "教育经历": {
+        "query_text": "要求有硕士研究生学历",
+        "attribute": "硕士"
+    },
+    "年龄": {
+        "query_text": "要求40岁以下",
+        "attribute": "40",
+        "condition": "以下"
+    },
+    "性别": {
+        "query_text": "男性优先",
+        "attribute": "男性"
+    },
+    "职级": {},
+    "工作经历": {
+        "exp": [
+            {
+                "query_text": "有5年以下农业相关工作经验",
+                "attribute": "农业",
+                "condition": [
+                    5,
+                    "以下"
+                ]
+            },
+            {
+                "query_text": "有5年以下保险工作经历",
+                "attribute": "保险",
+                "condition": [
+                    5,
+                    "以下"
+                ]
+            }
+        ],
+        "logic": "和"
+    }
+}

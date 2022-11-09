@@ -1,1 +1,36 @@
-{"id": 1, "raw_text": "男性优先，担任过副科级以上干部，获得全日制本科以上学位，40以上，有市政管理相关工作经验和有两年以下房地产相关工作经历。", "教育经历": {"query_text": "获得全日制本科以上学位", "attribute": "本科"}, "年龄": {"query_text": "40以上", "attribute": "40", "condition": "以上"}, "性别": {"query_text": "男性优先", "attribute": "男性"}, "职级": {"query_text": "担任过副科级以上干部", "attribute": "副科级"}, "工作经历": {"exp": [{"query_text": "有市政管理相关工作经验", "attribute": "市政管理", "condition": null}], "logic": "和"}}
+{
+    "id": 1,
+    "raw_text": "具有公安相关工作经历或具有4年以下学生相关工作经历，有本科以上学历，要求35以上，正科级干部(及以上)。",
+    "教育经历": {
+        "query_text": "有本科以上学历",
+        "attribute": "本科"
+    },
+    "年龄": {
+        "query_text": "要求35以上",
+        "attribute": "35",
+        "condition": "以上"
+    },
+    "性别": {},
+    "职级": {
+        "query_text": "正科级干部(及以上)",
+        "attribute": "正科级"
+    },
+    "工作经历": {
+        "exp": [
+            {
+                "query_text": "具有公安相关工作经历",
+                "attribute": "公安",
+                "condition": null
+            },
+            {
+                "query_text": "具有4年以下学生相关工作经历",
+                "attribute": "学生",
+                "condition": [
+                    4,
+                    "以下"
+                ]
+            }
+        ],
+        "logic": "或"
+    }
+}
