@@ -1,4 +1,4 @@
-load_path: 'resume_data'
+load_path: 'temp/resume'
 resume_label_path: 'labeled_data/resume_label_data.json'
 label_resume_path: 'labeled_data/label_resume_data.json'
 

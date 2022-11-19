@@ -1,4 +1,4 @@
-load_path: 'sample_gen_data/query'
+load_path: 'temp/query'
 resume_label_path: 'labeled_data/resume_label_data.json'
 label_resume_path: 'labeled_data/label_resume_data.json'
 entity_dict_path: 'labeled_data/entity_dict.json'
