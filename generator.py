@@ -6,8 +6,8 @@ import random
 import numpy as np
 from labels import _label_to_id, _id_to_label
 
-resume_label_dict = yaml.load(open('labeled_data/resume_label_data.json', 'r'), Loader=yaml.FullLoader)
-label_resume_dict = yaml.load(open('labeled_data/label_resume_data.json', 'r'), Loader=yaml.FullLoader)
+resume_label_dict = yaml.load(open('labeled_data/resume_label_data.json', 'r', encoding='utf-8'), Loader=yaml.FullLoader)
+label_resume_dict = yaml.load(open('labeled_data/label_resume_data.json', 'r', encoding='utf-8'), Loader=yaml.FullLoader)
 
 class ResumeGenerator():
     def __init__(self, id, config):
@@ -36,6 +36,9 @@ class ResumeGenerator():
             self.work_exp[resume]['end_time'] = self.work_exp[resume]['start_time'] + duration + np.random.choice(self.config['work_exp']['noise'])
             self.work_exp[resume]['start_time'] = str(round(self.work_exp[resume]['start_time'], 1))
             self.work_exp[resume]['end_time'] = str(round(self.work_exp[resume]['end_time'], 1))
+            # 修正月份为0的情况
+            if self.work_exp[resume]['end_time'].endswith('0'):
+                self.work_exp[resume]['end_time'] = self.work_exp[resume]['end_time'][0:-1]+'1'
 
     def load_resume(self):
         result = {'id': self.id, '教育经历': self.edu, '年龄': str(self.age), '性别': self.gen, '职级': self.rank, '工作经历': self.work_exp}
@@ -142,7 +145,7 @@ if __name__ == "__main__":
 
     if args.mode == 'resume':
         resume_config = yaml.load(
-            open('config/resume.yaml', "r"), Loader=yaml.FullLoader
+            open('config/resume.yaml', "r", encoding='utf-8'), Loader=yaml.FullLoader
         )
         for i in range(args.nums):
             rg = ResumeGenerator(i, resume_config)
@@ -150,7 +153,7 @@ if __name__ == "__main__":
 
     if args.mode == 'query':
         query_config = yaml.load(
-            open('config/query.yaml', "r"), Loader=yaml.FullLoader
+            open('config/query.yaml', "r", encoding='utf-8'), Loader=yaml.FullLoader
         )
         for i in range(args.nums):
             rg = QueryGenerator(i, query_config)
