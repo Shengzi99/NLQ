@@ -4,7 +4,7 @@ CREATE DATABASE NLQ;
 use NLQ;
 
 DROP TABLE IF EXISTS person;
-CREATE TABLE person(    
+CREATE TABLE person(
         person_id VARCHAR(255) PRIMARY KEY COMMENT '人员ID',
         person_name VARCHAR(255) DEFAULT NULL COMMENT '人员姓名',
         edu VARCHAR(255) COMMENT '教育经历',
